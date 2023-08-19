@@ -41,7 +41,7 @@ const BottomTabNav = () => {
           tabBarIcon: () => (
             <Ionicons name={'thumbs-down-sharp'} size={24} color={'black'} />
           ),
-          title: "",
+          title: "",//hi
         }}
       />
       <BottomTab.Screen
