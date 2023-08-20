@@ -2,7 +2,7 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { Text, View, StyleSheet } from "react-native";
-import BottomTab from "./Screens/BottomTabs";
+import BottomTab from "./Screens/AppointmentScreen";
 
 
 import { useNavigation } from '@react-navigation/native';

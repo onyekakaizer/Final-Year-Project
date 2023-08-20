@@ -18,7 +18,7 @@ const HomeScreen = () => {
       </View>
       <View style = {{height: 70,  flexDirection: 'row', width:'90%', backgroundColor:'#38B6FD',alignSelf:'center', padding:4, borderRadius: 30, marginTop: 40, elevation: 5,}}>
         <View
-        style ={{height:40, width: 40, borderRadius: 10,left:10, margin: 10,  backgroundColor:'white', }}></View>
+        style ={{height:40, width: 40, borderRadius: 10,left:10, margin: 10,  backgroundColor:'white', elevation:5 }}></View>
         <View style = {{ justifyContent: 'flex-start', margin: 10}}>
           <Text  style = {{fontWeight:'500', marginRight: 10}}>Mrs. Anita</Text>
           <Text  style = {{fontWeight:'700', marginRight: 10}}>Therapist</Text>
@@ -37,12 +37,11 @@ const HomeScreen = () => {
          
          <View style ={{justifyContent: 'center',marginTop: 120,}}>
             <TouchableOpacity style ={styles.counsellorIcon}>
-              <View style= {{backgroundColor:'white', borderRadius: 10, height: 100, width: 90, alignSelf:'center', }}>
-
+              <View style= {{backgroundColor:'white', borderRadius: 20, height: 100, width: 90, alignSelf:'center', elevation: 5 }}>
               </View>
-              <View style = {{flexDirection:'row'}}>
-                <Text style = {{alignSelf:'center'}}>Mrs ania</Text>
-                <View style = {{height: 10, width:10, backgroundColor:'green', borderRadius: 2,}}></View>
+              <View style = {{flexDirection:'row', alignItems:'center', justifyContent:'center', marginTop: 7,}}>
+                <Text style = {{fontWeight:'600'}}>Mrs ania</Text>
+                <View style = {{height: 10, width:10, backgroundColor:'green',marginLeft: 2,borderRadius: 7,}}></View>
               </View>
 
 
@@ -60,7 +59,7 @@ const styles = StyleSheet.create({
   counsellorIcon:{
     height: 200,
     width: 150,
-    borderRadius: 10,
+    borderRadius: 40,
     alignSelf:'center',
     backgroundColor: '#38B6FD',
     justifyContent: 'center',
