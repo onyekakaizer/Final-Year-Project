@@ -1,66 +1,39 @@
-import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import ProfileScreen from "./ProfileScreen";
-import HomeScreen from "./HomeScreen";
-import BookingScreen from "./BookingsScreen";
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
-
-import Ionicons from 'react-native-vector-icons/Ionicons';
-//import { Image } from "react-native-svg";
-
-
-
-const SettingsTab = () => {
+const AppointmentScreen = () => {
   return (
-    <Text></Text>
+    <View style={styles.container}>
+      <Text style={{justifyContent: 'flex-start', fontWeight:'600', color: 'black', top: 10, fontSize: 20}}>Councellor Profile</Text>
+      <View style = {styles.avatar}></View>
+      <View style = {{flexDirection: 'row', alignItems:'center', top: 30}}>
+        <Text style = {{ fontWeight: '700'}}>Mrs Anita</Text>
+        <View style = {{height: 10, width: 10, borderRadius:90, backgroundColor: 'green', marginLeft: 5}}></View>
+      </View>
+      <View style = {styles.appointmentIcons}></View>
+    </View>
   );
 };
-
-const BottomTab = createBottomTabNavigator();
-const BottomTabNav = () => {
-  return (
-    <BottomTab.Navigator screenOptions={{
-        tabBarStyle: { paddingTop: 10, height:75,backgroundColor:'#38B6FD', borderTopRightRadius: 20, borderTopLeftRadius: 20,},
-      }}>
-      <BottomTab.Screen
-        name='ScreenOne'
-        component={HomeScreen}
-        options={{headerShown: false,
-          tabBarIcon: ({ focused }) =>
-           <Ionicons name={focused? "home-sharp": 'home-outline'} size={30} color={'black'}/>,
-         
-           title: "",
-        }}
-      />
-      <BottomTab.Screen
-        name='ScreenTwo'
-        component={BookingScreen}
-        options={{headerShown: false,
-           
-          tabBarIcon: ({ focused }) => (
-            <Ionicons name={focused? "time-sharp" : 'time-outline'} size={30} color={'black'} />
-          ),
-          title: "",//hi
-        }}
-      />
-      <BottomTab.Screen
-        name='ScreenThree'
-        component={ProfileScreen}
-        options={{headerShown: false,
-          tabBarIcon: ({ focused }) => (
-            <Ionicons name={focused? 'person-sharp':'person-outline' } size={30} color={'black'} />
-          ),
-          title: "", 
-        }}
-      />
-    </BottomTab.Navigator>
-  );
-};
-
-export default BottomTabNav;
 
 const styles = StyleSheet.create({
-   
+  container: {
+    alignItems: 'center',
+    flex: 1,
+  },
+  avatar:{
+    height: 170,
+    width: 170,
+    top: 20,
+    borderRadius:125,
+    backgroundColor: 'grey',
 
+  },
+  appointmentIcons:{
+    height: 10,
+    width:'100%',
+    backgroundColor: 'yellow',
+    alignItems: 'flex-end',
+  }
 });
+
+export default AppointmentScreen;

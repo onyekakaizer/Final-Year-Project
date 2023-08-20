@@ -1,7 +1,18 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const HomeScreen = () => {
+import AppointmentScreen from './AppointmentScreen';
+
+interface AppointmentScreenProps {
+  navigation: any;
+}
+ 
+
+const HomeScreen = (props: AppointmentScreenProps) => {
+  const bookScreen = async () => {
+    props.navigation.navigate('AppointmentScreen');
+  };
+
   return (
     <View style = {{paddingHorizontal: 10}}>
       <View style={styles.container}>
@@ -36,7 +47,7 @@ const HomeScreen = () => {
             </View>
          
          <View style ={{justifyContent: 'center',marginTop: 120,}}>
-            <TouchableOpacity style ={styles.counsellorIcon}>
+            <TouchableOpacity style ={styles.counsellorIcon} onPress={bookScreen}>
               <View style= {{backgroundColor:'white', borderRadius: 20, height: 100, width: 90, alignSelf:'center', elevation: 5 }}>
               </View>
               <View style = {{flexDirection:'row', alignItems:'center', justifyContent:'center', marginTop: 7,}}>
