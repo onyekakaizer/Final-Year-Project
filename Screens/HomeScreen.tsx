@@ -30,7 +30,7 @@ const HomeScreen = () => {
       </View>
 
       
-            <View style = {{top: 50,  flexDirection: 'row', backgroundColor:'yellow', alignItems:'center',  justifyContent:'space-between'}}>
+            <View style = {{top: 50,  flexDirection: 'row', alignItems:'center',  justifyContent:'space-between'}}>
                 <Text style = {{fontWeight: '400', color: 'black', fontSize: 20}}>Counsellor</Text>
                 <TouchableOpacity><Text style = {{fontWeight: '600', color: 'black', fontSize: 20, right: 15}}>More info</Text></TouchableOpacity>
             </View>

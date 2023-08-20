@@ -27,29 +27,29 @@ const BottomTabNav = () => {
         name='ScreenOne'
         component={HomeScreen}
         options={{headerShown: false,
-          tabBarIcon: () =>
-           <Ionicons name={"thumbs-down-sharp"} size={24} color={'black'} />,
+          tabBarIcon: ({ focused }) =>
+           <Ionicons name={focused? "home-sharp": 'home-outline'} size={30} color={'black'}/>,
          
-           title: "hello",
+           title: "",
         }}
       />
       <BottomTab.Screen
         name='ScreenTwo'
-        component={ProfileScreen}
+        component={BookingScreen}
         options={{headerShown: false,
            
-          tabBarIcon: () => (
-            <Ionicons name={'thumbs-down-sharp'} size={24} color={'black'} />
+          tabBarIcon: ({ focused }) => (
+            <Ionicons name={focused? "time-sharp" : 'time-outline'} size={30} color={'black'} />
           ),
           title: "",//hi
         }}
       />
       <BottomTab.Screen
         name='ScreenThree'
-        component={BookingScreen}
+        component={ProfileScreen}
         options={{headerShown: false,
-          tabBarIcon: () => (
-            <Ionicons name={'thumbs-down-sharp'} size={24} color={'black'} />
+          tabBarIcon: ({ focused }) => (
+            <Ionicons name={focused? 'person-sharp':'person-outline' } size={30} color={'black'} />
           ),
           title: "", 
         }}
