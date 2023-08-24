@@ -15,7 +15,7 @@ import {
 interface LoginScreenProps {
   navigation: any;
 }
-const LoginScreen = (props: LoginScreenProps) => {
+const LoginScreenSta = (props: LoginScreenProps) => {
   const Login = async () => {
     props.navigation.navigate('Home');
   };
@@ -32,7 +32,7 @@ const LoginScreen = (props: LoginScreenProps) => {
                 <View >
                     <TextInput
                     style={styles.textInput}
-                    placeholder="Type your Mat No"
+                    placeholder="Type your Staff ID"
                     onChangeText={newText => setEmail(newText)}
                     defaultValue={email}></TextInput>
                     <View style={styles.line}></View>
@@ -54,7 +54,7 @@ const LoginScreen = (props: LoginScreenProps) => {
             </TouchableOpacity>
             <Text style={styles.orSignTxt}>Or sign in using</Text>
 
-            <TouchableOpacity onPress={() => props.navigation.navigate('Signup')}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('SignupSta')}>
             <Text style={styles.orSignTxt}>Do you have an account? Create</Text>
             </TouchableOpacity>
         </View>
@@ -135,4 +135,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginScreen;
+export default LoginScreenSta;
