@@ -5,6 +5,8 @@ import ProfileScreen from "./ProfileScreen";
 import HomeScreen from "./HomeScreen";
 import AppointmentScreen from "./AppointmentScreen";
 
+import AppointmentList from "./AppointmentList";
+
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 //import { Image } from "react-native-svg";
@@ -35,7 +37,7 @@ const BottomTabNav = () => {
       />
       <BottomTab.Screen
         name='ScreenTwo'
-        component={AppointmentScreen}
+        component={AppointmentList}
         options={{headerShown: false,
            
           tabBarIcon: ({ focused }) => (

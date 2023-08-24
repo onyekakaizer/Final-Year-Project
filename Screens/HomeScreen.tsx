@@ -16,11 +16,11 @@ const HomeScreen = (props: AppointmentScreenProps) => {
   return (
     <View style = {{paddingHorizontal: 10}}>
       <View style={styles.container}>
-        <Text style = {{fontWeight: 'bold', color:"black", top: 12, fontSize: 24}}>Home</Text>
+        <Text style = {{fontWeight: 'bold', color:"black", top: 12, fontSize: 24,}}>Home</Text>
       </View>
       <View style = {{flexDirection: 'row',justifyContent:'space-between', alignItems:'center', top: 50}}>
         <Text style={{fontWeight: 'bold', color: 'black', fontSize: 22,}}>Welcome Back John</Text>
-        <View style={{width: 50, height:50, borderRadius: 50,alignSelf:'flex-end', backgroundColor:'#38B6FD', right : 20 }}></View>
+        <View style={{width: 50, height:50, borderRadius: 50,alignSelf:'flex-end', backgroundColor:'#38B6FD', right : 20,elevation: 3}}></View>
         
       </View>
       <View style = {{marginTop: 100, flexDirection: 'row', alignItems:'center', justifyContent:'space-between'}}>
